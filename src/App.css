@@ -60,15 +60,15 @@ body{
   
 }
 .box{
-  width: 55%;
+  width: 70%;
   padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background: #191919;
   text-align: center;
   border-radius: 24px;
+  background-image:url('assets/images/v404-aew-121-contourtexture_2.jpg') ;
 }
 .box h1{
   color: white;
@@ -83,14 +83,14 @@ body{
   text-align: center;
   border: 2px solid #ffffff;
   padding: 14px 10px;
-  width: 200px;
+  width: 80%;
   outline: none;
   color: white;
   border-radius: 24px;
   transition: 0.25s;
 }
 .box input[type = "text"]:focus,.box input[type = "password"]:focus{
-  width: 280px;
+  width: 90%;
   border-color: #fcb900;
 }
 .box input[type = "submit"]{
