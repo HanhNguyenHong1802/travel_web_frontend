@@ -20,7 +20,7 @@ function SignIn () {
         password: loginPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3000/login",
+      url: "http://localhost:4000/login",
     }).then(function (res) {
       console.log(res);
       alert(res.data);
@@ -53,8 +53,8 @@ function SignIn () {
 
            <Router>
         <Switch>
-        <Route path="/sign-up" component={SignUp} />
-          <a href='/sign-up' style={{color:'white'}}>
+        <Route path="/register" component={SignUp} />
+          <a href='/register' style={{color:'white'}}>
           Don't have account? Create account!
           </a>
           </Switch>

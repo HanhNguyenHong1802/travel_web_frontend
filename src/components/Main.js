@@ -39,8 +39,8 @@ render() {
           <Route path='/' exact component={Home} />
           <Route path='/services' component={Services} />
           <Route path='/products' component={Products} />
-          <Route path='/sign-up' component={SignUp} />
-          <Route path='/sign-in' component={SignIn} />
+          <Route path='/register' component={SignUp} />
+          <Route path='/login' component={SignIn} />
         </Switch>
       
     </>

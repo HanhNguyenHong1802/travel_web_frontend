@@ -27,7 +27,7 @@ export const login =  (user) => {
 	    dispatch(requestLogin(user));
 	    console.log(user);
 	    try {
-		    var response = await fetch('http://localhost:3000/login', {
+		    var response = await fetch('http://localhost:/login', {
 		        method: 'POST',
 		        headers: { 'Content-Type':'application/json' },
 		        body: JSON.stringify(user)
