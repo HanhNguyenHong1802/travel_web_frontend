@@ -93,7 +93,7 @@ body{
   width: 90%;
   border-color: #fcb900;
 }
-.box input[type = "submit"]{
+.buttonSignIn{
   border:0;
   background: none;
   display: block;
@@ -107,6 +107,6 @@ body{
   transition: 0.25s;
   cursor: pointer;
 }
-.box input[type = "submit"]:hover{
+.buttonSignIn:hover{
   background: #fcb900;
 }

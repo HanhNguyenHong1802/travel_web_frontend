@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router,
   Route,
   Link,
@@ -6,27 +6,61 @@ import { BrowserRouter as Router,
   Switch} from 'react-router-dom';
 import '../../App.css';
 import SignUp from './SignUp'
-const SignIn = () => {
+import Axios from "axios";
+
+function SignIn () {
+  const [loginUsername, setLoginUsername] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const login = () => {
+
+    Axios({
+      method: "POST",
+      data: {
+        username: loginUsername,
+        password: loginPassword,
+      },
+      withCredentials: true,
+      url: "http://localhost:3000/login",
+    }).then(function (res) {
+      console.log(res);
+      alert(res.data);
+      
+    });
+  };
       return(
-        <>
-        <form class="box" action="index.html" method="post">
+        
+        <form class="box" action="index.html" >
           <h1>Login</h1>
-            <input type="text" name="" placeholder="Username"/>
-            <input type="password" name="" placeholder="Password"/>
-            <input type="submit" name="" value="Signin"/>
+          <input
+          type="text" 
+          placeholder="Username"
+          onChange={(e) => setLoginUsername(e.target.value)}
+          
+        />
+        <br />
+
+        <input
+          placeholder="Password"
+          type="password"
+          onChange={(e) => setLoginPassword(e.target.value)}
+          
+        />
+        <br />
+
+        <Link to="/profile">
+          <button className="buttonSignIn" onClick={login}>Continue</button><br/>
+        </Link>
+
            <Router>
         <Switch>
         <Route path="/sign-up" component={SignUp} />
           <a href='/sign-up' style={{color:'white'}}>
           Don't have account? Create account!
           </a>
-            
-          
           </Switch>
         </Router> 
         </form>
-        
-        </>
+       
       );
     
   
