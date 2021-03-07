@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Profiler } from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
@@ -7,7 +7,7 @@ import Services from './components/pages/Services';
 import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
 import SignIn from './components/pages/SignIn';
-
+import Profile from './components/pages/Profile';
 function App() {
   return (
     <>
@@ -19,6 +19,7 @@ function App() {
           <Route path='/products' component={Products} />
           <Route path='/register' component={SignUp} />
           <Route path='/login' component={SignIn} />
+          <Route path='/profile' component={Profile}/>
         </Switch>
       </Router>
     </>

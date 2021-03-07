@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cards.css';
+import './pages/style/Cards.css';
 import CardItem from './CardItem';
 
 function Cards() {

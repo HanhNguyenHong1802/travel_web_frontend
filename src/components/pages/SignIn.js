@@ -30,7 +30,7 @@ function SignIn () {
       return(
         
         <form class="box" action="index.html" >
-          <h1>Login</h1>
+          <h1>Sign In</h1>
           <input
           type="text" 
           placeholder="Username"
