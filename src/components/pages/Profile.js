@@ -95,7 +95,7 @@ componentDidMount() {
     render(){
         return (
             <div className="backgroungimg">
-            <h1>Account</h1>
+            <p style={{fontSize: '2rem', padding: 'auto'}}>Account</p>
                <h2><b>{this.state.name}, </b> {this.state.email} . <a href="#"> Enter profile</a></h2> 
                <div class="row" style={{marginTop: '15px'}}>
   <a href="#">
