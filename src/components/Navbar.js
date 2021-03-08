@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './pages/style/Navbar.css';
 import axios from 'axios';
 
@@ -10,7 +10,23 @@ function Navbar() {
   const [status, setStatus] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
+  const history =useHistory();
+  const closeMobileMenuLogout = () => {
+    
+    axios({
+      method: "GET",
+      withCredentials: true ,
+      url: "http://localhost:4000/logout",
+    }).then((res) =>{
+      console.log('res', res);
+      alert("You are logged out!");
+      setStatus(false);
+      history.push('/');
+    window.location.reload();
+    });
+    setClick(false);
+    
+  }
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -32,6 +48,8 @@ function Navbar() {
       setStatus(true);
     }
   })
+ 
+  
   window.addEventListener('resize', showButton);
 
   return (
@@ -71,6 +89,16 @@ function Navbar() {
                 Products
               </Link>
             </li>
+            <li>
+              <Link
+                to='/'
+                className='nav-links-mobile'
+                onClick={closeMobileMenuLogout}
+              >
+                Log Out
+              </Link>
+            </li>
+            
             </ul>
             </div>
             </nav>
@@ -105,6 +133,7 @@ function Navbar() {
                 Sign In
               </Link>
             </li>
+            
             {button && <Button buttonStyle='btn--outline'>SIGN IN</Button>}
           </ul>
           

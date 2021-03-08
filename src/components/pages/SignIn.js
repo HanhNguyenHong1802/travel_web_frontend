@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router,
   Route,
   Link, 
-  Switch} from 'react-router-dom';
+  Switch,
+  useHistory} from 'react-router-dom';
 import '../../App.css';
 import SignUp from './SignUp'
 import Axios from "axios";
@@ -10,6 +11,7 @@ import Axios from "axios";
 function SignIn () {
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
+  const history= useHistory();
   const login = () => {
 
     Axios({
@@ -23,8 +25,10 @@ function SignIn () {
     }).then(function (res) {
       console.log(res);
       alert(res.data);
-      
+      history.push('/profile');
+    window.location.reload();
     });
+    
   };
       return(
         
@@ -46,8 +50,8 @@ function SignIn () {
         />
         <br />
 
-        <Link to="/profile">
-          <button className="buttonSignIn" onClick={login}>Continue</button><br/>
+        <Link >
+          <button className="buttonSignIn" onClick={login} >Continue</button><br/>
         </Link>
 
            <Router>
