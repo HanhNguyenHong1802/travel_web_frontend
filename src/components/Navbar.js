@@ -36,7 +36,7 @@ function Navbar() {
 
   return (
     <>
-    {this.status ?
+    {status ?
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
