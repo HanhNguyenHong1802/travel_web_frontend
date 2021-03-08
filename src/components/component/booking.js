@@ -1,7 +1,7 @@
 import React from "react";
 import "../../App.css";
 import "../../styles/hotels.css";
-import { Link } from "react-router-dom";
+
 
 const BookingComp = ({ hotels }) => {
     return (

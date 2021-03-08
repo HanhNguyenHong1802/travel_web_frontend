@@ -135,9 +135,9 @@ componentDidMount() {
               <button className="logout" onClick={this.logout}> Logout</button>
             </center>
             <br/>
-  <section style={{backgroundColor: 'rgba(255, 255, 255, 0.527)'}}>
+  <section style={{backgroundColor: 'rgba(255, 255, 255, 0.8)'}}>
             <br/><br/><br/><br/>
-            <div className="login">
+            <div className="">
             <h1><b>Your Bookings</b></h1>
             <ProfileBookedComp hotels={this.state.booked}/>
             <br/>

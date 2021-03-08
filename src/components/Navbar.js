@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './pages/style/Navbar.css';
+import axios from 'axios';
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-
+  const [status, setStatus] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -21,10 +22,21 @@ function Navbar() {
   useEffect(() => {
     showButton();
   }, []);
-
+  
+  axios({
+    method: "GET", 
+    withCredentials: true,
+    url: "http://localhost:4000/userstatus",
+  }).then((res) => {
+    if(res.data){
+      setStatus(true);
+    }
+  })
   window.addEventListener('resize', showButton);
 
   return (
+    <>
+    {this.status ?
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
@@ -59,7 +71,22 @@ function Navbar() {
                 Products
               </Link>
             </li>
-
+            </ul>
+            </div>
+            </nav>
+    </>
+            :
+        <>
+            <nav className='navbar'>
+        <div className='navbar-container'>
+          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+            TRVL
+            <i class='fab fa-typo3' />
+          </Link>
+          <div className='menu-icon' onClick={handleClick}>
+            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          </div>
+          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li>
               <Link
                 to='/register'
@@ -78,12 +105,16 @@ function Navbar() {
                 Sign In
               </Link>
             </li>
+            {button && <Button buttonStyle='btn--outline'>SIGN IN</Button>}
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN IN</Button>}
+          
         </div>
       </nav>
     </>
+    }
+     </>
   );
+ 
 }
 
 export default Navbar;
