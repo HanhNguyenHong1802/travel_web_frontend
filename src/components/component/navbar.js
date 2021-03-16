@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import "../App.css";
+import "../../App.css";
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import Axios from "axios";
 
@@ -33,7 +33,7 @@ export default class NavbarComp extends Component {
             padding: "2.5%",
             paddingRight: "3%",
             paddingLeft: "3%",
-            height: "110px",
+            height: "0px",
             fontSize: "2.5rem",
             width: "100%",
             overflowX: "hidden",
@@ -60,7 +60,7 @@ export default class NavbarComp extends Component {
             padding: "2.5%",
             paddingRight: "3%",
             paddingLeft: "3%",
-            height: "110px",
+            height: "0px",
             fontSize: "2.5rem",
             width: "100%",
             overflowX: "hidden",
@@ -69,13 +69,7 @@ export default class NavbarComp extends Component {
           }}
           fixed="top"
         >
-          <Navbar.Brand href="/" style={{ color: "white" }}>
-            <h1 className="trvl">trvl.</h1>
-          </Navbar.Brand>
-  
-          <Navbar.Collapse className="justify-content-end">
-            <Nav.Link href="/login">Login </Nav.Link>
-          </Navbar.Collapse>
+          
         </Navbar>
       );
     }

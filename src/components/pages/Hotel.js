@@ -1,16 +1,16 @@
 // Individual Hotel Page 
 
 import React, { Component } from "react";
-import "../App.css";
-import "../styles/hotel.css";
-import NavbarComp from "../components/navbar";
+import "../../App.css";
+import "../../styles/hotel.css";
+import NavbarComp from "../component/navbar";
 import Axios from "axios";
 // below line adds libraries needed for google map embedding
 //import { Map, Marker, GoogleApiWrapper } from "google-maps-react"
 //import ReactMapGL, { Marker, Popup } from "react-map-gl";
 //import { useState, useEffect } from "react";
-import Map from "../components/hotelmap2"
-import ReviewsComp from "../components/reviews";
+import Map from "../component/hotelmap2"
+import ReviewsComp from "../component/reviews";
 
 
 

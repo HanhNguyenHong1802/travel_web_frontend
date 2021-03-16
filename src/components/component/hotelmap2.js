@@ -2,8 +2,8 @@
 // https://github.com/leighhalliday/mapbox-react-demo/blob/master/src/App.js
 
 import React, {useState} from "react";
-import "../App.css";
-import "../styles/textoverimage.css";
+import "../../App.css";
+import "../../styles/textoverimage.css";
 import ReactMapGL, {Marker} from "react-map-gl";
 //import * as hotelloc from "./hotel-map-geo.json";
 // please do not uncomment below code

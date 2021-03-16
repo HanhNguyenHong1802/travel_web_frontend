@@ -1,6 +1,6 @@
 import React from "react";
-import "../App.css";
-import "../styles/flights.css";
+import "../../App.css";
+import "../../styles/flights.css";
 
 const FlightsComp = ({flights, selectFlight}) => {
     return (

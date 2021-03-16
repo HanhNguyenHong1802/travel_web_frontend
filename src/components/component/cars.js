@@ -1,8 +1,8 @@
 // This is the "view all products" Products Component for the Shop Page - "ProductsComp" (blueprint code to dynamically serve product data)
 
 import React from "react";
-import "../App.css";
-import "../styles/explore.css";
+import "../../App.css";
+import "../../styles/explore.css";
 
 const CarsComp = ({ selectCar }) => {
     return (

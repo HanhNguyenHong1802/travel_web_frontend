@@ -1,8 +1,8 @@
 // This is the "view all products" Products Component for the Shop Page - "ProductsComp" (blueprint code to dynamically serve product data)
 
 import React from "react";
-import "../App.css";
-import "../styles/hotels.css";
+import "../../App.css";
+import "../../styles/hotels.css";
 import { Link } from "react-router-dom";
 
 const HotelsComp = ({ hotels, datefrom, dateto, selectHotel }) => {

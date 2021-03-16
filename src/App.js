@@ -3,11 +3,11 @@ import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Services from './components/pages/Services';
-import Products from './components/pages/Products';
+import Hotel from './components/pages/Hotel';
 import SignUp from './components/pages/SignUp';
 import SignIn from './components/pages/SignIn';
 import Profile from './components/pages/Profile';
+import Explore from './components/pages/Explore';
 function App() {
   return (
     <>
@@ -15,8 +15,8 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/services' component={Services} />
-          <Route path='/products' component={Products} />
+          <Route path='/hotel' component={Hotel} />
+          <Route path='/explore' component={Explore} />
           <Route path='/register' component={SignUp} />
           <Route path='/login' component={SignIn} />
           <Route path='/profile' component={Profile}/>
