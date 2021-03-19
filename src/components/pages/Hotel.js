@@ -26,18 +26,18 @@ class Hotel extends Component {
 
   componentDidMount() {
     let url = window.location.pathname
-    //console.log(url.split("/"))
+    console.log(url.split("/"))
     this.setState({datefrom: url.split("/")[3] })
     this.setState({dateto: url.split("/")[4] })
 
     Axios({
       method: "GET",
       withCredentials: true,
-      url: "http://localhost:5000/gethotelbyid/" + url.split("/")[2] + "/" + url.split("/")[3] + "/" + url.split("/")[4] ,
+      url: "http://localhost:4000/gethotelbyid/" + url.split("/")[2] + "/" + url.split("/")[3] + "/" + url.split("/")[4] ,
     }).then((res) => {  
       if (res.data){
         this.setState({hotels: res.data });
-        console.log(this.state.hotels[0].coords[0]);
+//        console.log(this.state.hotels[0].coords[0]);
       }
     });
   }
@@ -49,7 +49,7 @@ class Hotel extends Component {
     Axios({
       method: "POST",
       withCredentials: true,
-      url: "http://localhost:5000/addtobucketlist/" + hotel_id,
+      url: "http://localhost:4000/addtobucketlist/" + hotel_id,
     }).then((res) => {  
       if (res.data){
         console.log(res.data);
@@ -73,7 +73,7 @@ class Hotel extends Component {
         hotelId: url.split("/")[2],
       },
       withCredentials: true,
-      url: "http://localhost:5000/addreview",
+      url: "http://localhost:4000/addreview",
     }).then(function (res) {
       console.log(res);
       window.location.reload(false);
@@ -92,7 +92,7 @@ class Hotel extends Component {
         datefrom: url.split("/")[3],
         dateto: url.split("/")[4]
       },
-      url: "http://localhost:5000/bookhotel",
+      url: "http://localhost:4000/bookhotel",
     }).then((res) => {  
       if (res.data){
         console.log(res.data);

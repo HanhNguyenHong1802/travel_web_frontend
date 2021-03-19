@@ -15,7 +15,7 @@ export default class NavbarComp extends Component {
     Axios({
       method: "GET",
       withCredentials: true,
-      url: "http://localhost:5000/userstatus",
+      url: "http://localhost:4000/userstatus",
     }).then((res) => {  
       if (res.data){
         this.setState({
@@ -42,9 +42,7 @@ export default class NavbarComp extends Component {
           }}
           fixed="top"
         >
-          <Navbar.Brand href="/" style={{ color: "white" }}>
-            <h1 className="trvl">trvl.</h1>
-          </Navbar.Brand>
+          
   
           <Navbar.Collapse className="justify-content-end">
             <Nav.Link href="/profile"><AccountCircleIcon style={{fontSize: "xx-large", color: "white" }} /></Nav.Link>

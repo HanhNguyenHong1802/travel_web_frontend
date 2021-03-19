@@ -5,7 +5,6 @@ import "../../styles/flights.css";
 const FlightsComp = ({flights, selectFlight}) => {
     return (
       <div>
-  
           {flights.map((flight) => (
             <li key={flight.id}>
 

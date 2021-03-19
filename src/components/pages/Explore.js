@@ -122,6 +122,7 @@ class Explore extends Component {
                     url: "http://localhost:4000/date",
                     data:{
                       arrival: this.state.dateto,
+                      
                       locationDeparture: this.state.source,
                       locationArrival: this.state.destination,
                     }
@@ -183,7 +184,7 @@ class Explore extends Component {
 
   handleProceed = () => {
       this.setState({progress: this.state.progress+1});
-      //console.log(this.state.progress);
+      console.log(this.state.progress);
       Axios({
         method: "POST",
         withCredentials: true,
@@ -202,7 +203,7 @@ class Explore extends Component {
   }
   handleBackProceed = () => {
     this.setState({progress: this.state.progress-1});
-    //console.log(this.state.progress);
+    console.log(this.state.progress);
     
 }
 
@@ -370,13 +371,13 @@ handleBook = () => {
             ? <h1>Select Dates 	📅 </h1>
             : this.state.progress === 1
             ? <div><h1>Select A Flight ✈️</h1><br />
-            <ProgressBar animated now={30} />
             
-            {this.state.flights.length === 0? <img src="https://miro.medium.com/max/1158/1*9EBHIOzhE1XfMYoKz1JcsQ.gif" alt="Load"/> : <FlightsComp flights={this.state.flights} selectFlight={this.selectFlight}/>}
+            
+            {this.state.flights?.length === 0?<div className="loader"></div>: <FlightsComp flights={this.state.flights} selectFlight={this.selectFlight}/>}
             </div>
             : this.state.progress === 2 
             ?<div><h1>Select A Hotel 🏡</h1><br />
-            <ProgressBar animated now={60} />
+            
             <HotelsComp hotels={this.state.hotels} datefrom={this.state.datefrom} dateto={this.state.dateto}  selectHotel={this.selectHotel}/></div>
             : this.state.progress === 3
             ? <div><h1>Select A Cab 🚕</h1><br />
