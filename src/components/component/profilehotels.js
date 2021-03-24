@@ -11,13 +11,13 @@ const ProfileHotelsComp = ({ hotels }) => {
             <li key={hotel.name}>
 
               <div className="card">
-                  
+                  <div className="hotel-container">
                 <img
                   className="hotel-image"
                   src={hotel.imageurl}
                   alt="Hotel"
                 />
-
+              </div>
                 <div className="right3">
 
                     <div className="hotel-name">
@@ -32,7 +32,7 @@ const ProfileHotelsComp = ({ hotels }) => {
                   <div className="hotel-price">${hotel.price}<br/> </div>
 
                 </div>
-
+                
               </div>
             </li>
           ))}

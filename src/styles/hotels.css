@@ -11,9 +11,7 @@
   flex: 1;
   text-align: left;
   max-height: 100%;
-  margin: 0;
   padding: 0%;
-  width: 40%;
   position: absolute;
   border-radius: 20px 0px 0px 20px;
 }
@@ -36,3 +34,10 @@
 }
 
 
+.hotel-container {
+  display: flex;
+  
+  width: auto;
+  font-size: medium;
+  position: relative;
+}

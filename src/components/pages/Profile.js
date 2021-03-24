@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, {Component} from "react";
+import { Link } from "react-router-dom";
 import ProfileBookedComp from "../../components/component/booking"
 import ProfileHotelsComp from "../../components/component/profilehotels"
 import Footer from "../Footer";
@@ -36,7 +37,7 @@ componentDidMount() {
           visited: res.data.visited});
         console.log(res.data)
       }
-      
+      //console.log(`booked`, res.data.booked)
     });
 
     axios({
@@ -98,14 +99,14 @@ componentDidMount() {
             <p style={{fontSize: '2rem', padding: 'auto'}}>Account</p>
                <h2><b>{this.state.name}, </b> {this.state.email} . <a href="#"> Enter profile</a></h2> 
                <div class="row" style={{marginTop: '15px'}}>
-  <a href="#">
+  <Link to="/profile">
   <div class="column">
     <div class="card">
     <i class="fas fa-id-card"></i>
       <h3>Personal Info</h3>
     </div>
   </div>
-</a>
+</Link>
 <a href="#">
   <div class="column">
     <div class="card">

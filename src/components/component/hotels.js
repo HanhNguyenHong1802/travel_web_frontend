@@ -13,13 +13,13 @@ const HotelsComp = ({ hotels, datefrom, dateto, selectHotel }) => {
             <li key={hotel.name}>
 
               <div className="card">
-                  
+              <div className="hotel-container">
                 <img
                   className="hotel-image"
                   src={hotel.imageurl[0]}
                   alt="Hotel"
                 />
-
+                </div>
                 <div className="right3">
 
                   <Link to={"/hotel/" + hotel._id +"/"+datefrom.toString()+"/"+dateto.toString()}  target="_blank">

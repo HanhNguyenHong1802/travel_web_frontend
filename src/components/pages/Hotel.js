@@ -146,10 +146,10 @@ class Hotel extends Component {
               <ReviewsComp hotels={this.state.hotels} />
             </center>
 
-            <h1 style={{marginTop: "3%"}}>Want to review this hotel? ✏️</h1>
+            <h1 style={{marginTop: "3%", marginBottom:"20px"}}>Want to review this hotel? ✏️</h1>
             <form onSubmit={this.handleSubmit}>
-              <label style={{width: "90%"}}>
-                <textarea value={this.state.newreview} onChange={this.handleChange} placeholder="Add your review here!" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <label >
+                <textarea value={this.state.newreview} onChange={this.handleChange} placeholder="Add your review here!" />
                 <input className="submit" type="submit" value="Submit" />
               </label>
             </form>

@@ -9,13 +9,13 @@ const CarsComp = ({ selectCar }) => {
       <div>
 
               <div className="card">
-
+              <div className="hotel-container">
                     <img
                       className="hotel-image"
                       src="https://www.hdwallpapers.in/download/black_volkswagen_golf_gtd_2020_4k_5k_hd_cars-HD.jpg"
                       alt="hotel"
                     />
-               
+               </div>
                 <div className="right3">
                 <div className="hotel-name">
                   <b>Economy</b>
@@ -29,13 +29,13 @@ const CarsComp = ({ selectCar }) => {
               </div>
 
               <div className="card">
-
+              <div className="hotel-container">
                     <img
                       className="hotel-image"
                       src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/large-2479-s-classsaloon.jpg?itok=QTxMln2k"
                       alt="hotel"
                     />
-               
+               </div>
                 <div className="right3">
                 <div className="hotel-name">
                   <b>Executive</b>
@@ -49,13 +49,13 @@ const CarsComp = ({ selectCar }) => {
               </div>
 
               <div className="card">
-
+              <div className="hotel-container">
                     <img
                       className="hotel-image"
                       src="https://media.familyminded.com/ee/88/ee88b74994d2469c945f0128bcef0caa.jpeg"
                       alt="hotel"
                     />
-               
+               </div>
                 <div className="right3">
                 <div className="hotel-name">
                   <b>Family</b>
@@ -69,13 +69,13 @@ const CarsComp = ({ selectCar }) => {
               </div>
 
               <div className="card">
-
+              <div className="hotel-container">
                     <img
                       className="hotel-image"
                       src="https://cdn.carbuzz.com/gallery-images/840x560/711000/0/711084.jpg"
                       alt="hotel"
                     />
-               
+               </div>
                 <div className="right3">
                 <div className="hotel-name">
                   <b>Off-Road 4WD</b>

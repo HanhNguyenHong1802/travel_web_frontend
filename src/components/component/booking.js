@@ -8,28 +8,28 @@ const BookingComp = ({ hotels }) => {
       <div>
   
           {hotels.map((hotel) => (
-            <li key={hotel.name}>
+            <li key={hotel.hotelname}>
 
               <div className="card">
-                  
+                  <div className="hotel-container">
                 <img
                   className="hotel-image"
-                  src={hotel.imageurl}
+                  src={hotel.hotelimageurl}
                   alt="Hotel Image"
                 />
-
+              </div>
                 <div className="right3">
 
                     <div className="hotel-name">
-                      {hotel.name}
+                      {hotel.hotelname}
                     </div>
 
 
                   <div className="hotel-location">
-                    {hotel.location}
+                    {hotel.hotellocation}
                   </div>
 
-                  <div className="hotel-price">${hotel.price}<br/> </div>
+                  <div className="hotel-price">${hotel.hotelcost}<br/> </div>
 
                 </div>
 

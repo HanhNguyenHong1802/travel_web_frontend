@@ -2,7 +2,7 @@
 
 .header {
   background-image: url(https://res.cloudinary.com/ashokacs/image/upload/v1605586021/navbar_umxnk6.png);
-  height: 20rem;
+  height: 14rem;
   background-size: relative;
 }
 
@@ -183,6 +183,7 @@ select {
   padding: 2%;
   background-color: rgb(255, 255, 255);
   border-radius: 30px;
+  width: -webkit-fill-available;
 }
 
 /* Proceed / Go Back buttons */

@@ -11,7 +11,7 @@ export default class NavbarComp extends Component {
     status: false
   }
 
-  componentDidMount(){
+  componentDidMount(){ 
     Axios({
       method: "GET",
       withCredentials: true,
@@ -33,7 +33,7 @@ export default class NavbarComp extends Component {
             padding: "2.5%",
             paddingRight: "3%",
             paddingLeft: "3%",
-            height: "0px",
+            height: "10%",
             fontSize: "2.5rem",
             width: "100%",
             overflowX: "hidden",
