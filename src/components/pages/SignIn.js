@@ -36,7 +36,7 @@ function SignIn () {
   };
       return(
         
-        <form class="box" action="index.html" >
+        <form className="box" action="index.html" >
           <h1>Sign In</h1>
           <input
           type="text" 

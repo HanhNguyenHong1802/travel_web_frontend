@@ -98,35 +98,35 @@ componentDidMount() {
             <div className="backgroungimg">
             <p style={{fontSize: '2rem', padding: 'auto'}}>Account</p>
                <h2><b>{this.state.name}, </b> {this.state.email} . <a href="#"> Enter profile</a></h2> 
-               <div class="row" style={{marginTop: '15px'}}>
+               <div className="row" style={{marginTop: '15px'}}>
   <Link to="/profile">
-  <div class="column">
-    <div class="card">
-    <i class="fas fa-id-card"></i>
+  <div className="column">
+    <div className="card">
+    <i className="fas fa-id-card"></i>
       <h3>Personal Info</h3>
     </div>
   </div>
 </Link>
 <a href="#">
-  <div class="column">
-    <div class="card">
-    <i class="fas fa-wallet"></i>
+  <div className="column">
+    <div className="card">
+    <i className="fas fa-wallet"></i>
       <h3>Payment</h3>
     </div>
   </div>
 </a>  
 <a href="#">
-  <div class="column">
-    <div class="card">
-    <i class="fas fa-user"></i>
+  <div className="column">
+    <div className="card">
+    <i className="fas fa-user"></i>
       <h3>Private</h3>
     </div>
   </div>
   </a>
   <a href="#">
-  <div class="column">
-    <div class="card">
-    <i class="fas fa-bell"></i>
+  <div className="column">
+    <div className="card">
+    <i className="fas fa-bell"></i>
       <h3>Anouncement</h3>
     </div>
   </div>

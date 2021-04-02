@@ -51,7 +51,7 @@ export default function Worldmap() {
         longitude={hotel.geometry.coordinates[1]}
         >
           <button 
-            class='text-over-image'
+            className='text-over-image'
             onClick= {e => {
               e.preventDefault();
               setSelectedHotel(hotel);

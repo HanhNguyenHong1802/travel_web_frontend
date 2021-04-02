@@ -51,7 +51,7 @@ export default function Map2(params) {
         longitude={parseFloat(params.hotel[0].coords[1])}
         >
           <button 
-            class='text-over-image'
+            className='text-over-image'
            
           >
             <img src="https://res.cloudinary.com/dzky4f4zb/image/upload/v1606205953/trvl_marker_jf856y.png" alt="Hotel icon" />

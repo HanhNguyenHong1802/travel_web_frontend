@@ -27,7 +27,7 @@ function SignUp(){
     });
   };
       return(
-        <form class="box" action="index.html" method="post">
+        <form className="box" action="index.html" method="post">
           <h1>Signup</h1>
             <input type="text" 
                    name="" 
