@@ -10,7 +10,7 @@ const HotelsComp = ({ hotels, datefrom, dateto, selectHotel }) => {
       <div>
   
           {hotels.map((hotel) => (
-            <li key={hotel.name}>
+            <li key={hotel.name} style={{listStyle:'none'}}>
 
               <div className="card">
               <div className="hotel-container">

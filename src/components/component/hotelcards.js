@@ -10,7 +10,7 @@ const HotelCardComp = ({ hotels, datefrom = new Date(), dateto = new Date() }) =
     return (
       <div className="hotelcard-container">
           {hotels.map((hotel) => (
-            <li className="hotelcard-items" key={hotel._id}>
+            <li className="hotelcard-items" key={hotel._id} style={{listStyle:'none'}}>
               <div className="hotelcard">
               <Link to={"/hotel/" + hotel._id+"/"+datefrom.toString()+"/"+dateto.toString()}  target="_blank">
 

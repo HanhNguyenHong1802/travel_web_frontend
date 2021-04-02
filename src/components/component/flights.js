@@ -6,7 +6,7 @@ const FlightsComp = ({flights, selectFlight}) => {
     return (
       <div>
           {flights.map((flight) => (
-            <li key={flight.id}>
+            <li key={flight.id} style={{listStyle:'none'}}>
 
               <div className="card">               
                 <div className="flight-container">

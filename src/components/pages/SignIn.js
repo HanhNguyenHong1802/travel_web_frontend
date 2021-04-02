@@ -7,6 +7,7 @@ import { BrowserRouter as Router,
 import '../../App.css';
 import SignUp from './SignUp'
 import Axios from "axios";
+import GoogleButton from "react-google-button";
 
 function SignIn () {
   const [loginUsername, setLoginUsername] = useState("");
@@ -29,6 +30,9 @@ function SignIn () {
     window.location.reload();
     });
     
+  };
+  const googleAuth = () => {
+    window.open("http://localhost:4000/google");
   };
       return(
         
@@ -53,7 +57,10 @@ function SignIn () {
         <Link >
           <button className="buttonSignIn" onClick={login} >Continue</button><br/>
         </Link>
-
+        <center>
+          <GoogleButton onClick={googleAuth}/>
+        </center>
+        <br/>
            <Router>
         <Switch>
         <Route path="/register" component={SignUp} />

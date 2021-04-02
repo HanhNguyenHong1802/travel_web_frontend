@@ -59,11 +59,11 @@ render(){
   return (
     <>
       <HeroSection />
-      <section style={{paddingTop: "7%", paddingBottom: "5%"}}>
+      <section >
       <div style={{background:"rgba(255,255,255,0.9)"}}>
           <h1 style={{fontSize: "6rem"}}>Welcome to <b>trvl</b></h1>
 
-          <h1 style={{fontSize: "3.5rem", display: "inline-block", marginLeft: "auto", marginRight:"auto"}}>
+          <h1 style={{fontSize: "3.5rem"}}>
           <Typewriter style={{display: "block", marginLeft: "auto", marginRight:"auto"}}
             options={{
               strings: ['Travel Tokyo 🗼','Beach please 🏄‍♂️','Explore New York City 🗽','Namaste India 🛺','Experience scuba diving 🐠','Global cuisines 🍣'],

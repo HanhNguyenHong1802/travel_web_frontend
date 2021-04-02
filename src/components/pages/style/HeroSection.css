@@ -34,10 +34,25 @@ video {
 
 .hero-btns {
   margin-top: 32px;
+  margin: 6px; 
+  padding: 12px 26px;
+  font-size: 20px;
+  display: inline-flex;
 }
 
 .hero-btns .btn {
-  margin: 6px;
+  margin: 6px; 
+  padding: 12px 26px;
+  font-size: 20px;
+}
+
+.homepage-btn {
+  margin:'6px';
+  padding: '12px 26px';
+  font-size: '20px';
+  background: 'white';
+  border: 'none';
+  border-radius: '2px';
 }
 
 .fa-play-circle {
