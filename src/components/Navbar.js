@@ -91,7 +91,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                to='/products'
+                to='/'
                 className='nav-links-mobile'
                 onClick={closeMobileMenuLogout}
               >

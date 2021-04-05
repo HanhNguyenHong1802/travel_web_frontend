@@ -2,7 +2,7 @@
 
 .header {
   background-image: url(https://res.cloudinary.com/ashokacs/image/upload/v1605586021/navbar_umxnk6.png);
-  height: 20rem;
+  height: 14rem;
   background-size: relative;
 }
 
@@ -38,6 +38,7 @@ select {
   min-width: 0px !important;
   position: relative !important;
   align-items: center !important;
+  
 }
 
 .search-input {
@@ -182,6 +183,7 @@ select {
   padding: 2%;
   background-color: rgb(255, 255, 255);
   border-radius: 30px;
+  width: -webkit-fill-available;
 }
 
 /* Proceed / Go Back buttons */
@@ -201,6 +203,7 @@ select {
 .proceed-button:hover {
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
 }
+
 .loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
