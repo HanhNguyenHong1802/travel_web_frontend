@@ -110,7 +110,7 @@ class Hotel extends Component {
       <li key={hotel.name}>
         
         <div className="hotel-banner">
-          <NavbarComp />
+          {/* <NavbarComp /> */}
           <img
             className="ihotel-img"
             src={hotel.imageurl}

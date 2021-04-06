@@ -106,7 +106,7 @@ class Explore extends Component {
     if (this.state.source==='' || this.state.destination===''|| d1 < d || d2 < d){
         alert("Please fill all fields to proceed!")
     }
-    else if (d1<d2){
+    else if (d1<=d2||this.state.source===this.state.destination){
         alert("You can't travel back in time, sweetie")
     }
     else{
@@ -254,7 +254,7 @@ handleBook = () => {
       <div>
 
         <div className="header">
-          <NavbarComp />
+          
         </div>
 
         <div className="search">
@@ -327,9 +327,9 @@ handleBook = () => {
             : null}
             <br />
             <hr/>
-            <b>Flight Price:</b> $ {this.state.flightPrice}<br/>
-            <b>Hotel Price:</b> $ {this.state.hotelPrice} x {this.state.days} nights<br/>
-            <b>Car Price:</b> $ {this.state.carPrice} x {this.state.days} days<br/>
+            <b>Flight Price: $ {this.state.flightPrice}</b><br/>
+            <b>Hotel Price: $ {this.state.hotelPrice} x {this.state.days} nights</b><br/>
+            <b>Car Price: $ {this.state.carPrice} x {this.state.days} days</b><br/>
             <hr/>
 
             <b>Subtotal: </b> ${(parseFloat(this.state.flightPrice) + parseFloat(this.state.hotelPrice)*parseInt(this.state.days) + parseFloat(this.state.carPrice)*parseInt(this.state.days))}<br/>
@@ -371,9 +371,7 @@ handleBook = () => {
             ? <h1>Select Dates 	📅 </h1>
             : this.state.progress === 1
             ? <div><h1>Select A Flight ✈️</h1><br />
-            
-            
-            {this.state.flights?.length === 0?<div className="loader"></div>: <FlightsComp flights={this.state.flights} selectFlight={this.selectFlight}/>}
+            {this.state.flights?.length === 0?<div className="loader" ></div>: <FlightsComp flights={this.state.flights} selectFlight={this.selectFlight}/>}
             </div>
             : this.state.progress === 2 
             ?<div><h1>Select A Hotel 🏡</h1><br />
@@ -381,9 +379,9 @@ handleBook = () => {
             <HotelsComp hotels={this.state.hotels} datefrom={this.state.datefrom} dateto={this.state.dateto}  selectHotel={this.selectHotel}/></div>
             : this.state.progress === 3
             ? <div><h1>Select A Cab 🚕</h1><br />
-            <ProgressBar animated now={90} />
+            
             <CarsComp selectCar={this.selectCar}/></div>
-            : <div><ProgressBar animated now={100} />
+            : <div>
             <img src="https://thumbs.gfycat.com/QuaintLikelyFlyingfish-size_restricted.gif" alt="Done"/>
             <h1>Booking Complete!</h1></div>}
 

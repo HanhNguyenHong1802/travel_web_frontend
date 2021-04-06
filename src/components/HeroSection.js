@@ -25,7 +25,7 @@ function HeroSection() {
           }}
         >
           GET STARTED
-        </button></Link>
+        </button></Link> 
 
         <ModalVideo/>
       </div>

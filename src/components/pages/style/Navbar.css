@@ -156,3 +156,23 @@
     transition: 250ms;
   }
 }
+
+.button{
+  background:#1B1919;
+  font-size:1.2rem;
+  cursor:pointer;
+   margin-left:50px;
+   text-align: center;
+    padding: 1.4rem;
+    display: table;
+    color: white;
+    border: none;
+    height: 80px;
+    
+}
+
+.button:hover{
+  background:white;
+  color: black;
+  transition: all 0.5s ease;
+}

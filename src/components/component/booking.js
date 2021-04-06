@@ -8,7 +8,7 @@ const BookingComp = ({ hotels }) => {
       <div>
   
           {hotels.map((hotel) => (
-            <li key={hotel.hotelname}>
+            <li key={hotel.hotelname} style={{listStyle:'none'}}>
 
               <div className="card">
                   <div className="hotel-container">

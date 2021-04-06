@@ -12,7 +12,7 @@ const HotelsComp = ({ hotels, datefrom, dateto, selectHotel }) => {
           {hotels.map((hotel) => (
             <li key={hotel.name} style={{listStyle:'none'}}>
 
-              <div className="card">
+              <div className="card" style={{display:'-ms-flexbox'}}>
               <div className="hotel-container">
                 <img
                   className="hotel-image"

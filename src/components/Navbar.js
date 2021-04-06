@@ -3,6 +3,7 @@ import { Button } from './Button';
 import { Link, useHistory } from 'react-router-dom';
 import './pages/style/Navbar.css';
 import axios from 'axios';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -82,21 +83,21 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-                to='/'
+                to='/profile'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Products
+                <AccountCircleIcon style={{fontSize: "xx-large", color: "white" }} />
               </Link>
             </li>
             <li>
-              <Link
-                to='/'
-                className='nav-links-mobile'
+              <button
+                
+                className='button'
                 onClick={closeMobileMenuLogout}
               >
                 Log Out
-              </Link>
+              </button>
             </li>
             
             </ul>

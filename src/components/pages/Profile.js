@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ProfileBookedComp from "../../components/component/booking"
 import ProfileHotelsComp from "../../components/component/profilehotels"
 import Footer from "../Footer";
+
 class Profile extends Component {
 state = {
     bucketlistedhotels: [],
@@ -58,6 +59,7 @@ componentDidMount() {
       }).then((res) => {
         alert("You are logged out!");
         //console.log(res.data);
+        window.location.reload();
       });
     };
 
@@ -96,8 +98,8 @@ componentDidMount() {
     render(){
         return (
             <div className="backgroungimg">
-            <p style={{fontSize: '2rem', padding: 'auto'}}>Account</p>
-               <h2><b>{this.state.name}, </b> {this.state.email} . <a href="#"> Enter profile</a></h2> 
+            <p style={{fontSize: '2rem', padding: 'auto', marginLeft:'20px'}}>Account</p>
+               <h2 style={{ marginLeft:'20px'}}><b>{this.state.name}, </b> {this.state.email} . <a href="#"> Enter profile</a></h2> 
                <div className="row" style={{marginTop: '15px'}}>
   <Link to="/profile">
   <div className="column">
@@ -138,17 +140,17 @@ componentDidMount() {
             <br/>
   <section style={{backgroundColor: 'rgba(255, 255, 255, 0.8)'}}>
             <br/><br/><br/><br/>
-            <div className="">
+            <table style={{tableLayout:'fixed', width:'100%'}}>
+            <td>
             <h1><b>Your Bookings</b></h1>
             <ProfileBookedComp hotels={this.state.booked}/>
-            <br/>
+            <br/></td>
+            <td>
             <h1><b>Your Bucketlisted Hotels</b></h1>
             <ProfileHotelsComp hotels={this.state.bucketlistedhotels}/>
 
-            <br/>
-      
-
-            </div>
+            <br/></td>
+            </table>
           </section>
 </div>
 <br/>

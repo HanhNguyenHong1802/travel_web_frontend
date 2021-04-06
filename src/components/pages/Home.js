@@ -4,11 +4,8 @@ import Cards from '../Cards';
 import HeroSection from '../HeroSection';
 import Footer from '../Footer';
 import "../../styles/home.css"
-import {Link} from 'react-router-dom'
 import Axios from "axios";
 import Typewriter from 'typewriter-effect';
-import NavbarComp from "../component/navbar"
-import CarouselComp from "../component/carousel";
 import HotelCardComp from "../component/hotelcards";
 import Worldmap from "../component/worldmap";
 
