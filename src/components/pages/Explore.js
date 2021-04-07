@@ -1,19 +1,17 @@
 // Explore Page
 
 import React, { Component  } from "react";
-import { ProgressBar} from 'react-bootstrap'
 import { Typeahead } from 'react-bootstrap-typeahead';
 import "../../App.css";
 import "../../styles/explore.css";
-import NavbarComp from "../component/navbar";
 import Axios from "axios";
 import FlightsComp from "../component/flights";
 import HotelsComp from "../component/hotels";
 import CarsComp from "../component/cars";
-
 import options from '../component/data';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
-
+import ScrollToTop from "react-scroll-to-top";
+import { Form } from "react-bootstrap";
 class Explore extends Component {
 
 
@@ -269,6 +267,7 @@ handleBook = () => {
                   onChange={this.handleSourceChange}
                   options={options}
                   placeholder="Where from?"
+                  minLength={0}
                 />
               </div>
             </div>
@@ -282,6 +281,7 @@ handleBook = () => {
                   onChange={this.handleDestinationChange}
                   options={options}
                   placeholder="Where to?"
+                  minLength={0}
                 />
               </div>
             </div>
@@ -389,7 +389,7 @@ handleBook = () => {
           
       </div>
     </div>
-
+    <ScrollToTop smooth color="#6f00ff" />
   </div>
 );
           }

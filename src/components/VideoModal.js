@@ -16,7 +16,7 @@ export class VideoModal extends Component {
   render() {
     return (
       <div>
-        <div>
+        
           <ModalVideo
             channel="youtube"
             isOpen={this.state.isOpen}
@@ -36,7 +36,7 @@ export class VideoModal extends Component {
         >
           WATCH TRAILER <i className='far fa-play-circle' />
         </button>
-        </div>
+        
       </div>
     );
   }

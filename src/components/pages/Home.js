@@ -8,7 +8,7 @@ import Axios from "axios";
 import Typewriter from 'typewriter-effect';
 import HotelCardComp from "../component/hotelcards";
 import Worldmap from "../component/worldmap";
-
+import ScrollToTop from "react-scroll-to-top";
 
 class Home extends Component {
 
@@ -111,6 +111,7 @@ render(){
         </div>
     </section>
       <Cards />
+      <ScrollToTop smooth color="#6f00ff" />
       <Footer />
     </>
   );

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ProfileBookedComp from "../../components/component/booking"
 import ProfileHotelsComp from "../../components/component/profilehotels"
 import Footer from "../Footer";
+import ScrollToTop from "react-scroll-to-top";
 
 class Profile extends Component {
 state = {
@@ -101,7 +102,7 @@ componentDidMount() {
             <p style={{fontSize: '2rem', padding: 'auto', marginLeft:'20px'}}>Account</p>
                <h2 style={{ marginLeft:'20px'}}><b>{this.state.name}, </b> {this.state.email} . <a href="#"> Enter profile</a></h2> 
                <div className="row" style={{marginTop: '15px'}}>
-  <Link to="/profile">
+  {/* <Link to="/profile">
   <div className="column">
     <div className="card">
     <i className="fas fa-id-card"></i>
@@ -132,13 +133,29 @@ componentDidMount() {
       <h3>Anouncement</h3>
     </div>
   </div>
-  </a>
-  <br/>
+  </a> */}
+  <section style={{backgroundColor: 'rgba(255, 255, 255, 0.5)'}}>
+  <div>
   <center>
+  <h3>Registered Mobile number: <b>{this.state.mobile}</b> Registered Address: <b>{this.state.address}</b></h3>
+            <br></br>
+            <h4> Update your number 📞: &nbsp;<input className="input-box" type="text" onChange={this.handleNumChange} style={{background:'white', color:'white', border:'visible'}}/>
+            &nbsp; &nbsp;
+            <button className="otherbuttons" onClick={this.updateNum}> Update Mobile</button>
+            </h4> 
+            <h4> Update your address 🏡: &nbsp;<input className="input-box" type="text" onChange={this.handleAddChange} style={{background:'white', color:'white'}}/>
+            &nbsp; &nbsp;
+            <button className="otherbuttons" onClick={this.updateAdd}> Update address</button>
+            </h4>
+
+            <br />
+            </center>
+            
+            <center>
               <button className="logout" onClick={this.logout}> Logout</button>
             </center>
+            </div>
             <br/>
-  <section style={{backgroundColor: 'rgba(255, 255, 255, 0.8)'}}>
             <br/><br/><br/><br/>
             <table style={{tableLayout:'fixed', width:'100%'}}>
             <td>
@@ -154,6 +171,7 @@ componentDidMount() {
           </section>
 </div>
 <br/>
+<ScrollToTop smooth color="#6f00ff" />
 <Footer/>
 
  </div>

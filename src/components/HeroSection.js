@@ -26,8 +26,20 @@ function HeroSection() {
         >
           GET STARTED
         </button></Link> 
-
-        <ModalVideo/>
+        <a href="https://www.youtube.com/watch?v=eH2WNtL5ong">
+        <button
+          style={{
+            margin:'6px',
+            padding: '12px 26px',
+            fontSize: '20px',
+            background: 'white',
+            border: 'none',
+            borderRadius: '2px'
+          }}
+          
+        >
+          WATCH TRAILER <i className='far fa-play-circle' />
+        </button></a>
       </div>
     </div>
   );
