@@ -139,11 +139,11 @@ componentDidMount() {
   <center>
   <h3>Registered Mobile number: <b>{this.state.mobile}</b> Registered Address: <b>{this.state.address}</b></h3>
             <br></br>
-            <h4> Update your number 📞: &nbsp;<input className="input-box" type="text" onChange={this.handleNumChange} style={{background:'white', color:'white', border:'visible'}}/>
+            <h4> Update your number 📞: &nbsp;<input className="input-box" type="text" onChange={this.handleNumChange} style={{background:'white', color:'black', border:'visible'}}/>
             &nbsp; &nbsp;
             <button className="otherbuttons" onClick={this.updateNum}> Update Mobile</button>
             </h4> 
-            <h4> Update your address 🏡: &nbsp;<input className="input-box" type="text" onChange={this.handleAddChange} style={{background:'white', color:'white'}}/>
+            <h4> Update your address 🏡: &nbsp;<input className="input-box" type="text" onChange={this.handleAddChange} style={{background:'white', color:'black'}}/>
             &nbsp; &nbsp;
             <button className="otherbuttons" onClick={this.updateAdd}> Update address</button>
             </h4>

@@ -268,6 +268,7 @@ handleBook = () => {
                   options={options}
                   placeholder="Where from?"
                   minLength={0}
+                  highlightOnlyResult={true}
                 />
               </div>
             </div>
@@ -282,6 +283,7 @@ handleBook = () => {
                   options={options}
                   placeholder="Where to?"
                   minLength={0}
+                  highlightOnlyResult={true}
                 />
               </div>
             </div>
