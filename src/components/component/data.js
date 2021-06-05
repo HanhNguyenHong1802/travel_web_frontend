@@ -1,5 +1,5 @@
 export default [
-  { label: 'Rome ', capital: 'FCO'},
+  { label: 'Rome \r\n', capital: 'FCO'},
   { label: 'London ', capital: 'LHR'},
   { label: 'New York ', capital: 'JFK'},
   { label: 'Los Angeles', capital: 'LAX'},

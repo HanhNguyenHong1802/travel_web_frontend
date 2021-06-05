@@ -12,6 +12,9 @@ import options from '../component/data';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
 import ScrollToTop from "react-scroll-to-top";
 import { Form } from "react-bootstrap";
+import Select from 'react-select';
+import 'react-bootstrap-typeahead/css/Typeahead.css';
+
 class Explore extends Component {
 
 
@@ -38,6 +41,7 @@ class Explore extends Component {
     progress: 0,
     hotelSelectID: '',
     userstatus: '',
+    selectedOption:null
   };
 
   componentDidMount = async(e) =>{
@@ -77,7 +81,7 @@ class Explore extends Component {
   }
   handleDestinationChange = async(e) =>{
     if(e[0]){
-      console.log(e[0].capital);
+      console.log("test",e[0].capital);
       this.setState({destination: e[0].capital});
     }
     //await this.setState({destination: e.target.value});
@@ -256,19 +260,19 @@ handleBook = () => {
         </div>
 
         <div className="search">
-        <form action="#">
+        <form >
 
           <div className="search1" data-panel-bounds="true">
 
             <div className="destination">
               <div className="search-input">
                 <Typeahead
-                  id="basic-example"
+                  //id="basic-typeahead-single"
+                  //value={selectedOption}
+                  display='grid'
                   onChange={this.handleSourceChange}
                   options={options}
                   placeholder="Where from?"
-                  minLength={0}
-                  highlightOnlyResult={true}
                 />
               </div>
             </div>
@@ -278,12 +282,11 @@ handleBook = () => {
           <div className="destination">
               <div className="search-input">
                 <Typeahead
-                  id="basic-example"
+                  id="basic-typeahead-single"
+                  //value={selectedOption}
                   onChange={this.handleDestinationChange}
                   options={options}
                   placeholder="Where to?"
-                  minLength={0}
-                  highlightOnlyResult={true}
                 />
               </div>
             </div>
