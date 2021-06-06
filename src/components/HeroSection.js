@@ -10,15 +10,15 @@ function HeroSection() {
   //const [hotel,setHotel]=useState([])
   // const history =useHistory();
   // const onClickExplore= history.push('/explore')
-  const handleSearch =()=>{
-    axios({
-      method: "POST",
-      withCredentials: true ,
-      url: "http://localhost:4000/hotelsearch",
-    }).then((res) =>{
-      console.log('res', res);
-    });
-  }
+  // const handleSearch =()=>{
+  //   axios({
+  //     method: "POST",
+  //     withCredentials: true ,
+  //     url: "http://localhost:4000/hotelsearch",
+  //   }).then((res) =>{
+  //     console.log('res', res);
+  //   });
+  // }
   return (
     <div className='hero-container'>
       <video src='/videos/video-1.mp4' autoPlay loop muted />
@@ -53,12 +53,12 @@ function HeroSection() {
             WATCH TRAILER <i className='far fa-play-circle' />
           </button></a>
       </div>
-      <SearchField
+      {/* <SearchField
         placeholder="Search..."
         onChange={handleSearch}
-        searchText="This is initial search text"
+        //searchText="This is initial search text"
         classNames="test-class"
-      />
+      /> */}
     </div>
   );
 }

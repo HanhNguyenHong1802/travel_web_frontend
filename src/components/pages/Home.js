@@ -14,6 +14,9 @@ import Chatbot from "react-chatbot-kit";
 import config from "../config";
 import actionProvider from "../ActionProvider";
 import messageParser from "../MessageParser";
+import skybotConfig from "../../components/skybot/config";
+import skybotMessageParser from "../../components/skybot/MessageParser";
+import skybotActionProvider from "../../components/skybot/ActionProvider";
 // const steps = [
 //   {
 //     id: '0',
@@ -140,12 +143,10 @@ class Home extends Component {
             <div className="chat-popup">
             {this.state.showBot && (
           <Chatbot
-            config={config}
-            actionProvider={actionProvider}
-            messageHistory={loadMessages()}
-            messageParser={messageParser}
-            saveMessages={saveMessages}
-          />
+                config={skybotConfig}
+                messageParser={skybotMessageParser}
+                actionProvider={skybotActionProvider}
+              />
         )}
           
           </div>
