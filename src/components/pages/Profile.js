@@ -137,7 +137,7 @@ componentDidMount() {
   <section style={{backgroundColor: 'rgba(255, 255, 255, 0.5)'}}>
   <div>
   <center>
-  <h3>Registered Mobile number: <b>{this.state.mobile}</b> Registered Address: <b>{this.state.address}</b></h3>
+  <h3>Registered Mobile number: <b>{this.state.mobile}</b><br/><br/> Registered Address: <b>{this.state.address}</b></h3>
             <br></br>
             <h4> Update your number 📞: &nbsp;<input className="input-box" type="text" onChange={this.handleNumChange} style={{background:'white', color:'black', border:'visible'}}/>
             &nbsp; &nbsp;
@@ -151,9 +151,9 @@ componentDidMount() {
             <br />
             </center>
             
-            <center>
+            {/* <center>
               <button className="logout" onClick={this.logout}> Logout</button>
-            </center>
+            </center> */}
             </div>
             <br/>
             <br/><br/><br/><br/>

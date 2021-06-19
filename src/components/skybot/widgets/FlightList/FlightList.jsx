@@ -16,7 +16,7 @@ const FlightList = ({ flightType, selectedAirport, scrollIntoView }) => {
     const getFlights = async () => {
       const flights = await getFlightsData(selectedAirport.iata, flightType);
 
-      const filteredFlights = flights.filter((item) => item.Status === null);
+      const filteredFlights = flights?.filter((item) => item.Status === null);
 
       setFlights(filteredFlights);
       setType(flightType);
@@ -28,7 +28,7 @@ const FlightList = ({ flightType, selectedAirport, scrollIntoView }) => {
     scrollIntoView();
   });
 
-  const flightSlice = flights.slice(0, 5);
+  const flightSlice = flights?.slice(0, 5);
   const departure = type === "departure";
 
   return (

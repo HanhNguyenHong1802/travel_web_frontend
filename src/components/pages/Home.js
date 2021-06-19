@@ -11,9 +11,9 @@ import HotelCardComp from "../component/hotelcards";
 import Worldmap from "../component/worldmap";
 import ScrollToTop from "react-scroll-to-top";
 import Chatbot from "react-chatbot-kit";
-import config from "../config";
-import actionProvider from "../ActionProvider";
-import messageParser from "../MessageParser";
+// import config from "../config";
+// import actionProvider from "../ActionProvider";
+// import messageParser from "../MessageParser";
 import skybotConfig from "../../components/skybot/config";
 import skybotMessageParser from "../../components/skybot/MessageParser";
 import skybotActionProvider from "../../components/skybot/ActionProvider";
@@ -70,6 +70,26 @@ class Home extends Component {
     }).then((res) => {
       this.setState({ userstatus: res.data });
       console.log(res.data)
+    });
+    Axios({
+      method: "GET",
+      withCredentials: true,
+      url: "http://localhost:4000/getuser",
+    }).then((res) => {
+      if (res.data === "Please login first"){
+        alert(res.data)
+      }
+      else{
+        this.setState({ mobile: res.data.mobile,
+          name: res.data.name,
+          email :res.data.email,
+          address: res.data.address,
+          booked: res.data.booked,
+          bucketlist: res.data.bucketlist,
+          visited: res.data.visited});
+        console.log(res.data)
+      }
+      //console.log(`booked`, res.data.booked)
     });
   }
 
